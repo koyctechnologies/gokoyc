@@ -12,7 +12,7 @@
 		SecretKey: "REPLACE_HERE",
 	}
 		
-	var jsonBytes = []byte(`{"id_number":"` + SOME_PAN + `"}`)
+	var jsonBytes = []byte(`{"id_number":"` + PAN_NUMBER + `"}`)
 
 	resp, err := koyc.NewRequest(keys, "POST", "/pan/pan-only", jsonBytes)
 	if err != nil {
