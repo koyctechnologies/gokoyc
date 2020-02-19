@@ -39,7 +39,7 @@ Here is a complete test, where you need to find and replace `REPLACE_HERE`
 	)
 
 	const (
-		SOME_PAN = "REPLACE_HERE"
+		PAN_NUMBER = "REPLACE_HERE"
 	)
 	
 	func TestKoycPan(t *testing.T) {
@@ -51,7 +51,7 @@ Here is a complete test, where you need to find and replace `REPLACE_HERE`
 			SecretKey: "REPLACE_HERE",
 		}
 		
-		var jsonBytes = []byte(`{"id_number":"` + SOME_PAN+ `","dob":"1947-08-15"}`)
+		var jsonBytes = []byte(`{"id_number":"` + PAN_NUMBER+ `","dob":"REPLACE_HERE(YYYY-MM-DD)"}`)
 
 		resp, err := koyc.NewRequest(keys, "POST", "/pan/pan-only", jsonBytes)
 		if err != nil {
